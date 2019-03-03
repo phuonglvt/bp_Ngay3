@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>Currency Converter</h1>
+<input type="text" id="VND" size="10" value="0" onchange="vndfunc()"/>
+<label for="VND"> VND </label>
+<input type="text" id="USD" size="10" value="0" onchange="usdfunc()" />
+<label for="USD"> USD </label>
+
+<script>
+    var vnd, usd;
+    function init()
+    {
+        vnd = document.getElementById("VND");
+        usd = document.getElementById("USD");
+    }
+
+    function vndfunc()
+    {
+        usd.value = parseFloat(vnd.value) * 23000;
+    }
+
+    function usdfunc()
+    {
+        vnd.value = parseFloat(usd.value) / 23000;
+    }
+    init();
+</script>
+</body>
+</body>
+</html>
